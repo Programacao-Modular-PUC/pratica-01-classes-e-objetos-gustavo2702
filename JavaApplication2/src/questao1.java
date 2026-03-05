@@ -10,7 +10,18 @@
 import java.util.Scanner;
 public class questao1 {
     public static void main(String[] args){
+        int c1,c2;
         Scanner sc = new Scanner(System.in);
-        print
+        trianguloret t= new trianguloret();
+        System.out.println("Digite o cateto 1 e o cateto 2");
+        t.c1 = sc.nextInt();
+        t.c2 = sc.nextInt();
+        
+    }
+
+    private static class trianguloret {
+
+        public trianguloret() {
+        }
     }
 }
