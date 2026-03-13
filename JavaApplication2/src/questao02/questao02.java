@@ -42,4 +42,5 @@ public class questao02 {
           System.out.println("Pessoa: " + p.getNome() + "--- Imc: " + p.calcImc());
           System.out.println("Classificação: " + p.informaObesidade());
     }
+     Data data = new Data();
 }
