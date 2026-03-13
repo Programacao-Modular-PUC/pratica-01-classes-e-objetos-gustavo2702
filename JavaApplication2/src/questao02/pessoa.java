@@ -15,7 +15,7 @@ public class pessoa {
     private double altura;
     private double peso;
     private double imc;
-    
+    private Data dataNascimento;
     public double calcImc(){
         imc = peso/(altura*altura);
         return imc;
@@ -43,7 +43,13 @@ public class pessoa {
            return "Classificação não encontrada";
        }
     }
+    public void setDataNascimento(Data dataNascimento) {
+    this.dataNascimento = dataNascimento;
+}
 
+public Data getDataNascimento() {
+    return dataNascimento;
+}
     public void setNome(String nome) {
         this.nome = nome;
     }
