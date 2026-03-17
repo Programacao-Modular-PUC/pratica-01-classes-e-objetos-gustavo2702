@@ -66,8 +66,9 @@ public class questao02 {
           
           
        }
+       int ifake=1;
        for(int i=0;i<cont;i++){
-           int ifake=1;
+           
            System.out.println("-----------------");
            System.out.println("Cadastro " + ifake +":");
            System.out.println("Nome completo: " + p[i].getNomefull());
