@@ -8,6 +8,7 @@ package questao02;
  *
  * @author gusta
  */
+import java.util.Calendar;
 public class pessoa {
     private String nome; 
     private String sobrenome;
@@ -15,7 +16,8 @@ public class pessoa {
     private double altura;
     private double peso;
     private double imc;
-    
+    private Data dataNascimento;
+    private String nomefull;
     public double calcImc(){
         imc = peso/(altura*altura);
         return imc;
@@ -43,7 +45,14 @@ public class pessoa {
            return "Classificação não encontrada";
        }
     }
+   
+    public void setDataNascimento(Data dataNascimento) {
+    this.dataNascimento = dataNascimento;
+    }
 
+    public Data getDataNascimento() {
+    return dataNascimento;
+    }
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -90,5 +99,32 @@ public class pessoa {
 
     public double getImc() {
         return imc;
+    }
+    //funcao
+    public int calculaIdade(){
+        Calendar hoje = Calendar.getInstance();
+        int anoAtual = hoje.get(Calendar.YEAR);
+        int diaAtual = hoje.get(Calendar.DAY_OF_MONTH) ;
+        int mesAtual = hoje.get(Calendar.MONTH)+1;
+        
+        int idade = anoAtual - dataNascimento.getAno();
+        
+        if(mesAtual < dataNascimento.getMes() ||
+       (mesAtual == dataNascimento.getMes() && diaAtual < dataNascimento.getDia())){
+        idade--;
+    }
+        return idade;
+    }
+
+    /**
+     * @return the nomefull
+     */
+    public String getNomefull() {
+        return nomefull;
+    }
+
+    
+    public void setNomefull(String nomefull) {
+        this.nomefull = nomefull;
     }
 }
